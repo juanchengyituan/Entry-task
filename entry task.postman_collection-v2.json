@@ -1,0 +1,81 @@
+{
+	"variables": [],
+	"info": {
+		"name": "entry task",
+		"_postman_id": "cf713403-2481-d09c-cf33-a2c20428f4c1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "自动化测试",
+			"description": "",
+			"item": [
+				{
+					"name": "entry task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"//根据返回的 Code 判断请求情况 ",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									""
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/shopee/test?a={{a}}&b={{b}}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"shopee",
+								"test"
+							],
+							"query": [
+								{
+									"key": "a",
+									"value": "{{a}}",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "b",
+									"value": "{{b}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
